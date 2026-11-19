@@ -1,0 +1,36 @@
+Here’s a tiny webpage with an apple that falls continuously, looping back to the top forever:
+
+```html name=index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Falling Apple</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(#bdeaff, #f3fbff);
+    }
+
+    .apple {
+      position: absolute;
+      top: -4rem;
+      left: 50%;
+      font-size: 3rem;
+      animation: fall 3s linear infinite;
+    }
+
+    @keyframes fall {
+      from { transform: translate(-50%, 0) rotate(0deg); }
+      to   { transform: translate(80px, 110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="apple" aria-label="Falling apple">🍎</div>
+</body>
+</html>
+```
